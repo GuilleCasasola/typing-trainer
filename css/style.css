@@ -1,0 +1,22 @@
+.aparecer {
+    opacity: 0;
+    /* transition: all 1s ease-in; */
+}
+#audio{
+    display: none
+    }
+* {
+    font-family: 'Courier New', monospace;
+}
+
+.header{
+    border-radius: 0 0 100px 100px;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }

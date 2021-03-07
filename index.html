@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/keypress.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   </head>
+<body class="mx-5">
+    <div class="row header  bg-primary">
+        <div class="col-12 text-center py-4 text-white">
+            <h1> <u> Entrenador de tipeo </u></h1>
+            <h7> <i>Typing Trainer</i></h7>
+        </div>
+    </div>
+    <div class="content">
+        <p class="p-5">Hola! Bienvenido al <b> entrenador de tipeo!</b> Su funcionamiento es muy sencillo, cargar tu texto y a tipear! El tiempo empieza a correr cuando tipeas la primera letra, y en cuanto termines de tipear todo el texto te aparecerán las estadísticas.</p>
+        <div class="row">
+            
+            <div id="textoCargado" class="col-6 border"></div>
+            <div id="addText" class="col-6 text-center">
+                <textarea placeholder="Ingresa el texto a tipear (15 a 1000 caracteres)" name="inputText" id="inputText" cols="60" rows="5"></textarea><br>
+                <button class="w-100" id="btncarga" onclick="cargarTexto()"> Cargar Texto</button>
+                <span id="mensaje"></span>
+            </div>
+      
+        </div>
+        <!-- <div class="pt-4">
+
+            <ul id='myTextos' class="list-group">
+                <li class="list-group-item">Cras justo odio <button class="btn btn-success">Tipear</button></li>
+
+            </ul>             
+        </div> -->
+    </div>
+    
+    <div class="modal fade" id="modalResultados" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Resultados</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="col-12 text-center" >
+                    <div id="resultado" class=" row aparecer">
+                        <div class="col-12">
+                            <p>El texto tiene <span id="cantPalabras"></span> palabras y <span id="cantCaracteres"></span> caracteres</p>  <br>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <p>Tiempo: <span id="tiempo"></span> seg</p>
+                            <p>Errores: <span id="errores"></span></p>
+                            <p>Acierto: %<span id="acierto"></span></p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <p>PPM: <span id="ppm"></span></p>
+                            <p>Errores Corregidos: <span id="errCorregido"></span></p>
+                            <p>Acierto real: %<span id="realAcierto"></span></p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="footer">
+        <button id="sonidoBtn" class="btn btn-success" onclick="adSound()">Sonido On</button>
+
+    </div>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
+
+</html>
